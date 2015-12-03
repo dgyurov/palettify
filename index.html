@@ -1,11 +1,25 @@
 <!doctype html>
-<html ng-app>
+<html>
   <head>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="app/app.js" charset="utf-8"></script>
   </head>
-  <body>
-    
+  <body ng-app="PalettifyApp">
+          <div class="paletteParent" ng-controller="MainController">
+            <div class="paletteContainer" ng-show="pContainer">
+              <h3 class="title">{{titles[palette]}}</h3>
+              <div class="color palette1" style="background-color:#{{colors[palette][0]}}"></div>
+              <div class="color palette2" style="background-color:#{{colors[palette][1]}}"></div>
+              <div class="color palette3" style="background-color:#{{colors[palette][2]}}"></div>
+              <div class="color palette4" style="background-color:#{{colors[palette][3]}}"></div>
+              <div class="color palette5" style="background-color:#{{colors[palette][4]}}"></div>
+              <div class="next unselectable" ng-click="nextPalette()">Next</div>
+            </div>
+        </div>
   </body>
 </html>

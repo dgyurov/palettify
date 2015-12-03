@@ -1,0 +1,56 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+.color {
+  color: white;
+  background-color: black;
+  float: left;
+  width: 20%;
+  height: 300px;
+  text-align: center;
+}
+
+.next{
+  clear: both;
+  text-align: center;
+  height: 40px;
+  vertical-align: middle;
+  background-color: rgb(86, 198, 255);
+  color: white;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.next:active {
+    background-color: rgb(94, 176, 255);
+}
+
+.title{
+  text-align: center;
+}
+
+.paletteParent{
+    height: 100%;
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+}
+
+.paletteContainer{
+  width: 25%;
+}
+
+.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}

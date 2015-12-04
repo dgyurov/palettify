@@ -7,7 +7,7 @@ angular.module('PalettifyApp', ['ngAnimate'])
 
      $http({method: 'GET', url: 'http://www.colourlovers.com/api/palettes/top?numResults=100&format=json'})
      .success(function(data) {
-       $scope.palette = Math.floor(Math.random()*data.length+1);
+       $scope.palette = Math.floor(Math.random()*data.length);
        $scope.titles = [];
        $scope.colors = [];
        for (var i in data) {
@@ -26,11 +26,11 @@ angular.module('PalettifyApp', ['ngAnimate'])
          var last = $scope.palette;
          var next  = -1;
          while(next===-1||next===last){
-           next = Math.floor(Math.random()*$scope.colors.length+1);
+           next = Math.floor(Math.random()*$scope.colors.length);
          }
          $scope.palette = next;
          $scope.pContainer = true;
-       }, 500);
+       }, 300);
      };
 
      $scope.changeBackground = function(){

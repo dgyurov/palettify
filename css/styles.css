@@ -1,7 +1,6 @@
 html,body{
   margin: 0;
   padding: 0;
-  background-color: white;
   height: 100%;
   width: 100%;
 }
@@ -9,9 +8,15 @@ html,body{
   color: white;
   background-color: black;
   float: left;
-  width: 20%;
+  width: 70px;
   height: 300px;
   text-align: center;
+  transition: width 300ms ease-in-out;
+  transform-origin: center center;
+}
+
+.color:hover{
+  width: 100px;
 }
 
 .next{
@@ -31,9 +36,14 @@ html,body{
 
 .title{
   text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 60px;
+  overflow: hidden;
 }
 
 .paletteParent{
+    width: 100%;
     height: 100%;
     display: -webkit-flex;
     display:         flex;
@@ -44,7 +54,8 @@ html,body{
 }
 
 .paletteContainer{
-  width: 25%;
+  max-width: 500px;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
 }
 
 .unselectable {
@@ -53,4 +64,20 @@ html,body{
    -webkit-user-select: none;
    -ms-user-select: none;
    user-select: none;
+}
+
+/* when hiding the picture */
+.ng-hide-add         { animation:0.5s fadeOutUpBig ease; }
+
+/* when showing the picture */
+.ng-hide-remove      { animation:0.5s fadeInUpBig ease; }
+
+.whitebg{
+  background-color: #f1f1f1;
+  color: #28292a;
+}
+
+.darkbg{
+  background-color: #28292a;
+  color: #f1f1f1;
 }

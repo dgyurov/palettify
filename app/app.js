@@ -1,7 +1,7 @@
 'use strict';
 angular.module('PalettifyApp', ['ngAnimate'])
  .controller('MainController', function($scope,$http,$timeout) {
-
+     $scope.dataLoaded = false;
      $scope.pContainer = true;
      $scope.backgroundclr = 'whitebg';
 
@@ -14,6 +14,7 @@ angular.module('PalettifyApp', ['ngAnimate'])
          $scope.colors.push(data[i].colors);
          $scope.titles.push(data[i].title);
        }
+       $scope.dataLoaded = true;
      })
      .error(function() {
        console.log('Ooooops! Something went wrong Charlie!');

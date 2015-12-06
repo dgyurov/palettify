@@ -4,23 +4,23 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.5.0-beta.2/angular-animate.min.js" charset="utf-8"></script>
+    <script src="app/app.js" charset="utf-8"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="app/app.js" charset="utf-8"></script>
   </head>
-  <body ng-app="PalettifyApp">
-    <div class="paletteParent {{backgroundclr}}" ng-controller="MainController" ng-click="changeBackground()">
-      <div class="paletteContainer" ng-show="pContainer" ng-click="$event.stopPropagation()">
-        <h3 class="title">{{titles[palette]}}</h3>
-        <div class="color palette1" style="background-color:#{{colors[palette][0]}}"></div>
-        <div class="color palette2" style="background-color:#{{colors[palette][1]}}"></div>
-        <div class="color palette3" style="background-color:#{{colors[palette][2]}}"></div>
-        <div class="color palette4" style="background-color:#{{colors[palette][3]}}"></div>
-        <div class="color palette5" style="background-color:#{{colors[palette][4]}}"></div>
-        <div class="next unselectable" ng-click="nextPalette($event)">Next</div>
-      </div>
+  <body ng-cloak ng-app="PalettifyApp" ng-controller="MainController">
+    <div class="preloaderContainer" ng-hide="dataLoaded">
+      <ul class="preloader">
+        <li class='one'></li>
+        <li class='two'></li>
+        <li class='three'></li>
+        <li class='four'></li>
+        <li class='five'></li>
+      </ul>
     </div>
+    <div ng-include="'./app/app.html'" class="includeCont"></div>
   </body>
 </html>

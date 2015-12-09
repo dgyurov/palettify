@@ -4,6 +4,7 @@ angular.module('PalettifyApp', ['ngAnimate'])
      $scope.dataLoaded = false;
      $scope.pContainer = true;
      $scope.backgroundclr = 'whitebg';
+     $scope.buttonclr = 'darkbg';
 
      $http({method: 'GET', url: 'http://www.colourlovers.com/api/palettes/top?numResults=100&format=json'})
      .success(function(data) {
@@ -37,8 +38,10 @@ angular.module('PalettifyApp', ['ngAnimate'])
      $scope.changeBackground = function(){
        if ($scope.backgroundclr==='whitebg') {
          $scope.backgroundclr = 'darkbg';
+         $scope.buttonclr = 'whitebg';
        }else{
          $scope.backgroundclr = 'whitebg';
+         $scope.buttonclr = 'darkbg';
        }
      };
 });

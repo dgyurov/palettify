@@ -1,4 +1,4 @@
-<div class="paletteParent {{backgroundclr}}" ng-show="dataLoaded" ng-click="changeBackground()">
+<div class="paletteParent {{backgroundclr}}" ng-show="dataLoaded">
   <div class="paletteContainer unselectable" ng-show="pContainer" ng-click="$event.stopPropagation()">
     <h3 class="title unselectable">{{titles[palette]}}</h3>
     <div class="color palette1" style="background-color:#{{colors[palette][0]}}"></div>
@@ -10,6 +10,5 @@
   </div>
 </div>
 <div class="bgControls" ng-show="dataLoaded">
-  <div class="whiteControl"></div>
-  <div class="blackControl"></div>
+  <div class="bgrControl {{buttonclr}}" ng-click="changeBackground()"></div>
 </div>

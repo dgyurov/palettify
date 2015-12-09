@@ -73,7 +73,7 @@ html,body,.includeCont{
 .paletteContainer.ng-hide-remove      { animation:0.3s rotateIn ease; }
 
 .preloaderContainer.ng-hide-add         { animation:1s bounceOut ease; }
-.paletteParent.ng-hide-remove      { animation:1.5s fadeIn ease-in; }
+.paletteParent.ng-hide-remove,.bgrControl.ng-hide-remove { animation:1.5s fadeIn ease-in; }
 
 
 .whitebg{
@@ -84,6 +84,17 @@ html,body,.includeCont{
 .darkbg{
   background-color: #28292a;
   color: #f1f1f1;
+}
+
+.bgrControl{
+  border-radius: 25px;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  cursor: pointer;
 }
 
 /*Preloader*/

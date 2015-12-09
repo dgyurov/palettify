@@ -97,6 +97,28 @@ html,body,.includeCont{
   cursor: pointer;
 }
 
+.logo{
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  width: 40px;
+  height: 40px;
+
+}
+
+.logo img{
+  width: 40px;
+  height: 40px;
+  opacity: .9;
+}
+
+.invert{
+      -webkit-filter: invert(1);
+     filter: invert(1);
+}
+
 /*Preloader*/
 .preloaderContainer{
   width: 100%;

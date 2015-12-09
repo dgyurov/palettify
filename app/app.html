@@ -10,5 +10,8 @@
   </div>
 </div>
 <div class="bgControls" ng-show="dataLoaded">
-  <div class="bgrControl {{buttonclr}}" ng-click="changeBackground()"></div>
+  <div class="bgrControl {{buttonclr}} tooltipnow" ng-click="changeBackground()" data-toggle="tooltip" data-placement="left" title="Swap background"></div>
+</div>
+<div class="logo {{invert?'invert':''}} tooltipnow" data-toggle="tooltip" data-placement="left" title="Made with love by">
+  <a href="http://dimi.rocks" title="Dimitar Gyurov"><img src="logo.png" alt="logo" /></a>
 </div>

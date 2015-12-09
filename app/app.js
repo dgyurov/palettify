@@ -5,6 +5,7 @@ angular.module('PalettifyApp', ['ngAnimate'])
      $scope.pContainer = true;
      $scope.backgroundclr = 'whitebg';
      $scope.buttonclr = 'darkbg';
+     $scope.invert = true;
 
      $http({method: 'GET', url: 'http://www.colourlovers.com/api/palettes/top?numResults=100&format=json'})
      .success(function(data) {
@@ -16,6 +17,7 @@ angular.module('PalettifyApp', ['ngAnimate'])
          $scope.titles.push(data[i].title);
        }
        $scope.dataLoaded = true;
+       angular.element(document.getElementsByClassName('tooltipnow')).tooltip();
      })
      .error(function() {
        console.log('Ooooops! Something went wrong Charlie!');
@@ -39,9 +41,11 @@ angular.module('PalettifyApp', ['ngAnimate'])
        if ($scope.backgroundclr==='whitebg') {
          $scope.backgroundclr = 'darkbg';
          $scope.buttonclr = 'whitebg';
+         $scope.invert = false;
        }else{
          $scope.backgroundclr = 'whitebg';
          $scope.buttonclr = 'darkbg';
+         $scope.invert=true;
        }
      };
 });

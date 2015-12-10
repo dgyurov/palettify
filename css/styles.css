@@ -18,6 +18,13 @@ html,body,.includeCont{
   width: 100px;
 }
 
+.hex{
+  position: relative;
+  top: 50%;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
 .next{
   clear: both;
   text-align: center;

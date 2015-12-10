@@ -7,7 +7,7 @@ angular.module('PalettifyApp', ['ngAnimate'])
      $scope.buttonclr = 'darkbg';
      $scope.invert = true;
 
-     $http({method: 'GET', url: 'http://www.colourlovers.com/api/palettes/top?numResults=100&format=json'})
+     $http({method: 'GET', url: 'app/data.json'})
      .success(function(data) {
        $scope.palette = Math.floor(Math.random()*data.length);
        $scope.titles = [];
@@ -16,8 +16,8 @@ angular.module('PalettifyApp', ['ngAnimate'])
          $scope.colors.push(data[i].colors);
          $scope.titles.push(data[i].title);
        }
-       $scope.dataLoaded = true;
        angular.element(document.getElementsByClassName('tooltipnow')).tooltip();
+       $scope.dataLoaded = true;
      })
      .error(function() {
        console.log('Ooooops! Something went wrong Charlie!');

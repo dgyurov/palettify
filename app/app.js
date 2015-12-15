@@ -63,7 +63,6 @@ angular.module('PalettifyApp', ['ngAnimate'])
        g = (rgb >>  8) & 0xff;
        b = (rgb >>  0) & 0xff;
        l = 0.2126 * r + 0.7152 * g + 0.0722 * b;
-       console.log('Lumi is: '+l);
        if(l>220){
          return true;
        }else{

@@ -1,11 +1,11 @@
 <div class="paletteParent {{backgroundclr}}" ng-show="dataLoaded">
   <div class="paletteContainer" ng-show="pContainer" ng-click="$event.stopPropagation()">
     <h3 class="title unselectable">{{titles[palette]}}</h3>
-    <div class="color palette1" style="background-color:#{{colors[palette][0]}}"><div class="hex">#{{colors[palette][0]}}</div></div>
-    <div class="color palette2" style="background-color:#{{colors[palette][1]}}"><div class="hex">#{{colors[palette][1]}}</div></div>
-    <div class="color palette3" style="background-color:#{{colors[palette][2]}}"><div class="hex">#{{colors[palette][2]}}</div></div>
-    <div class="color palette4" style="background-color:#{{colors[palette][3]}}"><div class="hex">#{{colors[palette][3]}}</div></div>
-    <div class="color palette5" style="background-color:#{{colors[palette][4]}}"><div class="hex">#{{colors[palette][4]}}</div></div>
+    <div class="color palette1" style="background-color:#{{colors[palette][0]}};color:{{isLight(colors[palette][0])?'#4D4D4D':'white'}}"><div class="hex">#{{colors[palette][0]}}</div></div>
+    <div class="color palette2" style="background-color:#{{colors[palette][1]}};color:{{isLight(colors[palette][1])?'#4D4D4D':'white'}}"><div class="hex">#{{colors[palette][1]}}</div></div>
+    <div class="color palette3" style="background-color:#{{colors[palette][2]}};color:{{isLight(colors[palette][2])?'#4D4D4D':'white'}}"><div class="hex">#{{colors[palette][2]}}</div></div>
+    <div class="color palette4" style="background-color:#{{colors[palette][3]}};color:{{isLight(colors[palette][3])?'#4D4D4D':'white'}}"><div class="hex">#{{colors[palette][3]}}</div></div>
+    <div class="color palette5" style="background-color:#{{colors[palette][4]}};color:{{isLight(colors[palette][4])?'#4D4D4D':'white'}}"><div class="hex">#{{colors[palette][4]}}</div></div>
     <div class="next unselectable" ng-click="nextPalette($event)">Next</div>
   </div>
 </div>
